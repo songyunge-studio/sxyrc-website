@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>72 道工序 - 汝瓷制作工艺 | 宋向元汝瓷</title>
+  <meta name="description" content="探索汝瓷制作的 72 道工序，从选料到出窑，每一步都是匠心传承。了解宋向元汝瓷的制作工艺。">
+  
+  <!-- 关键 CSS -->
+  <style>
+    :root {
+      --color-tianqing: #B0C4DE;
+      --color-yuebai: #F0F8FF;
+      --color-douqing: #90C4B6;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--color-yuebai);
+      line-height: 1.6;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--color-tianqing) 0%, var(--color-douqing) 100%);
+      color: white;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    
+    .intro {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .process-timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .process-step {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    
+    .process-step::before {
+      content: attr(data-step);
+      position: absolute;
+      left: -2.5rem;
+      top: 1.5rem;
+      width: 2rem;
+      height: 2rem;
+      background: var(--color-tianqing);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .step-title {
+      color: var(--color-tianqing);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .step-description {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    
+    .step-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .detail-item {
+      background: var(--color-yuebai);
+      padding: 1rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+    
+    .detail-label {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .detail-value {
+      color: var(--color-tianqing);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--color-tianqing);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--color-tianqing);
+    }
+    
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .nav-links { display: none; }
+      .process-step::before { left: -1.5rem; width: 1.5rem; height: 1.5rem; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">宋向元汝瓷</a>
+      <div class="nav-links">
+        <a href="/">首页</a>
+        <a href="/products.html">作品</a>
+        <a href="/about.html">关于</a>
+        <a href="/craft.html" style="color: var(--color-tianqing);">工艺</a>
+        <a href="/contact.html">联系</a>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="hero">
+    <h1>72 道工序</h1>
+    <p>匠心传承 · 精益求精</p>
+  </section>
+  
+  <div class="container">
+    <div class="intro">
+      <h2>汝瓷制作工艺</h2>
+      <p>汝瓷制作历经 72 道工序，每一道都凝聚着匠人的心血与智慧。从选料到出窑，历时数月，方能成就一件精品。</p>
+    </div>
+    
+    <div class="process-timeline">
+      <!-- 第 1 阶段：选料 -->
+      <div class="process-step" data-step="1">
+        <h3 class="step-title">选料</h3>
+        <p class="step-description">精选优质高岭土，确保原料纯净无杂质。</p>
+        <div class="step-details">
+          <div class="detail-item">
+            <div class="detail-label">耗时</div>
+            <div class="detail-value">3-5 天</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">温度</div>
+            <div class="detail-value">常温</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">关键</div>
+            <div class="detail-value">原料纯度</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第 2 阶段：练泥 -->
+      <div class="process-step" data-step="2">
+        <h3 class="step-title">练泥</h3>
+        <p class="step-description">反复揉练，排除空气，使泥料细腻均匀。</p>
+        <div class="step-details">
+          <div class="detail-item">
+            <div class="detail-label">耗时</div>
+            <div class="detail-value">7-10 天</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">次数</div>
+            <div class="detail-value">数十次</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">关键</div>
+            <div class="detail-value">排除气泡</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第 3 阶段：拉坯 -->
+      <div class="process-step" data-step="3">
+        <h3 class="step-title">拉坯</h3>
+        <p class="step-description">在转盘上手工拉制器型，考验匠人功力。</p>
+        <div class="step-details">
+          <div class="detail-item">
+            <div class="detail-label">耗时</div>
+            <div class="detail-value">1-2 小时/件</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">工具</div>
+            <div class="detail-value">拉坯机</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">关键</div>
+            <div class="detail-value">器型规整</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第 4 阶段：修坯 -->
+      <div class="process-step" data-step="4">
+        <h3 class="step-title">修坯</h3>
+        <p class="step-description">精细修整器型，使线条流畅，厚薄均匀。</p>
+        <div class="step-details">
+          <div class="detail-item">
+            <div class="detail-label">耗时</div>
+            <div class="detail-value">2-3 小时/件</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">工具</div>
+            <div class="detail-value">修坯刀</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">关键</div>
+            <div class="detail-value">厚薄均匀</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第 5 阶段：施釉 -->
+      <div class="process-step" data-step="5">
+        <h3 class="step-title">施釉</h3>
+        <p class="step-description">均匀施以天青釉，釉层厚薄适中。</p>
+        <div class="step-details">
+          <div class="detail-item">
+            <div class="detail-label">耗时</div>
+            <div class="detail-value">1 小时/件</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">釉色</div>
+            <div class="detail-value">天青色</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">关键</div>
+            <div class="detail-value">釉层均匀</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第 6 阶段：烧制 -->
+      <div class="process-step" data-step="6">
+        <h3 class="step-title">烧制</h3>
+        <p class="step-description">入窑烧制，控制温度曲线，成就天青色。</p>
+        <div class="step-details">
+          <div class="detail-item">
+            <div class="detail-label">耗时</div>
+            <div class="detail-value">24-48 小时</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">温度</div>
+            <div class="detail-value">1200-1300°C</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">关键</div>
+            <div class="detail-value">温度控制</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第 7 阶段：出窑 -->
+      <div class="process-step" data-step="7">
+        <h3 class="step-title">出窑</h3>
+        <p class="step-description">冷却出窑，检验品质，成品率极低。</p>
+        <div class="step-details">
+          <div class="detail-item">
+            <div class="detail-label">耗时</div>
+            <div class="detail-value">12 小时</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">成品率</div>
+            <div class="detail-value">10-20%</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">关键</div>
+            <div class="detail-value">自然冷却</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>© 2026 宋向元汝瓷 | 河南省汝州市</p>
+  </footer>
+</body>
+</html>

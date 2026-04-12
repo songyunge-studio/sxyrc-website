@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全部作品 - 宋向元汝瓷</title>
+  <meta name="description" content="宋向元汝瓷全部作品展示，包括茶杯、花瓶、碗、盘等汝瓷精品。每件作品都有诞生故事，非遗传承人亲手制作。">
+  
+  <!-- 关键 CSS -->
+  <style>
+    :root {
+      --color-tianqing: #B0C4DE;
+      --color-yuebai: #F0F8FF;
+      --color-douqing: #90C4B6;
+      --color-kaipian: #E8E8E8;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--color-yuebai);
+      line-height: 1.6;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--color-tianqing) 0%, var(--color-douqing) 100%);
+      color: white;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    
+    .filter-bar {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .filter-btn {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--color-tianqing);
+      background: white;
+      color: var(--color-tianqing);
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--color-tianqing);
+      color: white;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .product-image {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background: var(--color-kaipian);
+    }
+    
+    .product-info {
+      padding: 1.5rem;
+    }
+    
+    .product-name {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    
+    .product-category {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .product-price {
+      color: var(--color-tianqing);
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .product-story {
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      font-style: italic;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--color-tianqing);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--color-tianqing);
+    }
+    
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .nav-links { display: none; }
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">宋向元汝瓷</a>
+      <div class="nav-links">
+        <a href="/">首页</a>
+        <a href="/products.html" style="color: var(--color-tianqing);">作品</a>
+        <a href="/about.html">关于</a>
+        <a href="/craft.html">工艺</a>
+        <a href="/contact.html">联系</a>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="hero">
+    <h1>全部作品</h1>
+    <p>每件作品都有故事 · 非遗传承人亲手制作</p>
+  </section>
+  
+  <div class="container">
+    <!-- 筛选栏 -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterProducts('all')">全部</button>
+      <button class="filter-btn" onclick="filterProducts('茶杯')">茶杯</button>
+      <button class="filter-btn" onclick="filterProducts('花瓶')">花瓶</button>
+      <button class="filter-btn" onclick="filterProducts('碗')">碗</button>
+      <button class="filter-btn" onclick="filterProducts('盘')">盘</button>
+      <button class="filter-btn" onclick="filterProducts('其他')">其他</button>
+    </div>
+    
+    <!-- 产品网格 -->
+    <div class="product-grid" id="productGrid">
+      <!-- 产品卡片将通过 JavaScript 动态加载 -->
+    </div>
+  </div>
+  
+  <footer>
+    <p>© 2026 宋向元汝瓷 | 河南省汝州市</p>
+  </footer>
+  
+  <script>
+    let allProducts = [];
+    
+    // 加载产品数据
+    async function loadProducts() {
+      try {
+        const response = await fetch('/data/products.json');
+        const data = await response.json();
+        allProducts = data.products;
+        renderProducts(allProducts);
+      } catch (error) {
+        console.error('加载产品失败:', error);
+      }
+    }
+    
+    // 渲染产品卡片
+    function renderProducts(products) {
+      const grid = document.getElementById('productGrid');
+      grid.innerHTML = products.map(product => `
+        <div class="product-card" onclick="window.location.href='/products/${product.id}.html'">
+          <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+          <div class="product-info">
+            <div class="product-category">${product.category}</div>
+            <h3 class="product-name">${product.name}</h3>
+            <p class="product-price">¥${product.price}</p>
+            <p class="product-story">"${product.story}"</p>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    // 筛选产品
+    function filterProducts(category) {
+      // 更新按钮状态
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // 筛选产品
+      if (category === 'all') {
+        renderProducts(allProducts);
+      } else {
+        const filtered = allProducts.filter(p => p.category === category);
+        renderProducts(filtered);
+      }
+    }
+    
+    // 页面加载完成后初始化
+    document.addEventListener('DOMContentLoaded', loadProducts);
+  </script>
+</body>
+</html>

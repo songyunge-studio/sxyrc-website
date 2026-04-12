@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 - 宋向元汝瓷</title>
+  <meta name="description" content="联系宋向元汝瓷，咨询定制、批发、合作等事宜。欢迎来访汝州参观。">
+  
+  <!-- 关键 CSS -->
+  <style>
+    :root {
+      --color-tianqing: #B0C4DE;
+      --color-yuebai: #F0F8FF;
+      --color-douqing: #90C4B6;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--color-yuebai);
+      line-height: 1.6;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--color-tianqing) 0%, var(--color-douqing) 100%);
+      color: white;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .contact-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    .contact-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-title {
+      color: var(--color-tianqing);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-text {
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-link {
+      color: var(--color-tianqing);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+    
+    .form-section {
+      background: white;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .form-title {
+      color: var(--color-tianqing);
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--color-tianqing);
+    }
+    
+    .form-textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background: var(--color-tianqing);
+      color: white;
+      border: none;
+      padding: 1rem 3rem;
+      font-size: 1.1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .submit-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--color-tianqing);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--color-tianqing);
+    }
+    
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">宋向元汝瓷</a>
+      <div class="nav-links">
+        <a href="/">首页</a>
+        <a href="/products.html">作品</a>
+        <a href="/about.html">关于</a>
+        <a href="/craft.html">工艺</a>
+        <a href="/contact.html" style="color: var(--color-tianqing);">联系</a>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="hero">
+    <h1>联系我们</h1>
+    <p>欢迎咨询 · 期待合作</p>
+  </section>
+  
+  <div class="container">
+    <!-- 联系方式 -->
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3 class="contact-title">地址</h3>
+        <p class="contact-text">河南省汝州市 XXX 路 XXX 号</p>
+        <p class="contact-text">宋向元汝瓷有限公司</p>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h3 class="contact-title">电话</h3>
+        <p class="contact-text">
+          <a href="tel:+86-XXX-XXXXXXX" class="contact-link">+86-XXX-XXXXXXX</a>
+        </p>
+        <p class="contact-text">周一至周日 8:00-22:00</p>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <h3 class="contact-title">邮箱</h3>
+        <p class="contact-text">
+          <a href="mailto:154977566@qq.com" class="contact-link">154977566@qq.com</a>
+        </p>
+        <p class="contact-text">工作日内回复</p>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <h3 class="contact-title">在线客服</h3>
+        <p class="contact-text">小可客服助手</p>
+        <p class="contact-text">8:00-22:00 在线</p>
+      </div>
+    </div>
+    
+    <!-- 联系表单 -->
+    <div class="form-section">
+      <h2 class="form-title">在线留言</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label class="form-label" for="name">姓名 *</label>
+          <input type="text" id="name" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="phone">电话</label>
+          <input type="tel" id="phone" class="form-input">
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="email">邮箱 *</label>
+          <input type="email" id="email" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="subject">主题 *</label>
+          <input type="text" id="subject" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="message">留言内容 *</label>
+          <textarea id="message" class="form-textarea" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">提交留言</button>
+      </form>
+    </div>
+  </div>
+  
+  <footer>
+    <p>© 2026 宋向元汝瓷 | 河南省汝州市</p>
+  </footer>
+  
+  <script>
+    // 表单提交处理
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+      
+      // TODO: 发送到后端 API 或第三方表单服务
+      console.log('表单数据:', formData);
+      
+      alert('感谢您的留言！我们会尽快回复您。');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
