@@ -1,0 +1,33 @@
+{
+  "name": "sxyrc-website",
+  "version": "3.1.0",
+  "description": "宋向元汝瓷官网 - 雨过天青云破处",
+  "scripts": {
+    "dev": "npx serve .",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "build": "npm run build:css",
+    "deploy": "npm run build && git add . && git commit -m 'deploy' && git push"
+  },
+  "keywords": [
+    "汝瓷",
+    "宋向元",
+    "汝州",
+    "非遗",
+    "陶瓷"
+  ],
+  "author": "宋向元",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "serve": "^14.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/songyunge-studio/sxyrc-website.git"
+  },
+  "domains": {
+    "primary": "sxyrc.cn",
+    "backup": "sxyrc.com.cn",
+    "brand": "宋向元汝瓷。中国"
+  }
+}

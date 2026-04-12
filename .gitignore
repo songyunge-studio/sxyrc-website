@@ -1,0 +1,23 @@
+# 宋向元汝瓷官网 v3.1
+
+## 构建忽略文件
+node_modules/
+dist/
+.cache/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 敏感信息
+.env
+.env.local
+*.key
+*.pem
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.swp
