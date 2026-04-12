@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO -->
+  <title>宋向元汝瓷 - 雨过天青云破处 | 非遗传承人亲手制作</title>
+  <meta name="description" content="宋向元汝瓷，源自汝州，非遗传承。每件作品都有故事。天青釉茶杯、花瓶、碗盘等汝瓷精品，老爸亲手制作，温度与匠心并存。">
+  <meta name="keywords" content="汝瓷，汝瓷茶具，汝瓷花瓶，汝瓷非遗传承人，汝瓷定制，汝瓷大师作品，汝州汝瓷，河南汝瓷，宋向元">
+  <meta name="author" content="宋向元">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="宋向元汝瓷 - 雨过天青云破处">
+  <meta property="og:description" content="宋向元汝瓷，源自汝州，非遗传承。每件作品都有故事。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sxyrc.cn">
+  <meta property="og:image" content="https://sxyrc.cn/images/og-image.jpg">
+  
+  <!-- 结构化数据 (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "宋向元汝瓷",
+    "description": "汝州市宋向元汝瓷有限公司，非遗传承人宋向元亲手制作",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "河南省汝州市 XXX 路 XXX 号",
+      "addressLocality": "汝州市",
+      "addressRegion": "河南省",
+      "addressCountry": "CN"
+    },
+    "telephone": "+86-XXX-XXXXXXX",
+    "openingHours": "Mo-Su 08:00-22:00",
+    "priceRange": "¥¥",
+    "image": "https://sxyrc.cn/images/logo.png"
+  }
+  </script>
+  
+  <!-- 关键 CSS 内联 (首屏必需) -->
+  <style>
+    :root {
+      --color-tianqing: #B0C4DE;
+      --color-yuebai: #F0F8FF;
+      --color-douqing: #90C4B6;
+      --color-kaipian: #E8E8E8;
+      --color-text: #333;
+      --color-text-light: #666;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--color-yuebai);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--color-tianqing) 0%, var(--color-douqing) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--color-tianqing);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: var(--color-text);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--color-tianqing);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 3rem 0;
+      color: var(--color-tianqing);
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .product-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      background: var(--color-kaipian);
+    }
+    
+    .product-info {
+      padding: 1.5rem;
+    }
+    
+    .product-name {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .product-price {
+      color: var(--color-tianqing);
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .product-story {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+    
+    .chat-widget {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+    }
+    
+    .chat-button {
+      background: var(--color-tianqing);
+      color: white;
+      border: none;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    
+    .chat-button:hover {
+      transform: scale(1.05);
+    }
+    
+    footer {
+      background: var(--color-text);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1.2rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+  
+  <!-- 非关键 CSS 异步加载 -->
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">宋向元汝瓷</a>
+      <div class="nav-links">
+        <a href="#home">首页</a>
+        <a href="#products">作品</a>
+        <a href="#about">关于</a>
+        <a href="#craft">工艺</a>
+        <a href="#contact">联系</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- 首页 Hero -->
+  <section id="home" class="hero">
+    <div>
+      <h1>雨过天青云破处</h1>
+      <p>宋向元汝瓷 · 非遗传承 · 匠心制作</p>
+    </div>
+  </section>
+  
+  <!-- 作品展示 -->
+  <section id="products" class="container">
+    <h2 class="section-title">精选作品</h2>
+    <div class="product-grid" id="productGrid">
+      <!-- 产品卡片将通过 JavaScript 动态加载 -->
+    </div>
+  </section>
+  
+  <!-- 客服聊天窗口 -->
+  <div class="chat-widget" x-data="chatWidget()">
+    <button class="chat-button" @click="toggle()">
+      💬 联系客服
+    </button>
+  </div>
+  
+  <!-- 页脚 -->
+  <footer>
+    <p>© 2026 宋向元汝瓷 | 河南省汝州市</p>
+    <p>非遗传承人 · 匠心制作</p>
+  </footer>
+  
+  <!-- Alpine.js (CDN 引入，15KB) -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  
+  <!-- 主应用脚本 -->
+  <script>
+    // 产品数据加载
+    async function loadProducts() {
+      try {
+        const response = await fetch('/data/products.json');
+        const data = await response.json();
+        const grid = document.getElementById('productGrid');
+        
+        grid.innerHTML = data.products.map(product => `
+          <div class="product-card">
+            <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+            <div class="product-info">
+              <h3 class="product-name">${product.name}</h3>
+              <p class="product-price">¥${product.price}</p>
+              <p class="product-story">"${product.story}"</p>
+            </div>
+          </div>
+        `).join('');
+      } catch (error) {
+        console.error('加载产品失败:', error);
+      }
+    }
+    
+    // 客服聊天窗口 (Alpine.js)
+    function chatWidget() {
+      return {
+        open: false,
+        messages: [],
+        toggle() {
+          this.open = !this.open;
+          if (this.open && this.messages.length === 0) {
+            this.messages.push({
+              from: 'xiaoke',
+              text: '您好！我是小可，宋向元汝瓷的客服助手。有什么可以帮您的吗？😊'
+            });
+          }
+        }
+      }
+    }
+    
+    // 页面加载完成后初始化
+    document.addEventListener('DOMContentLoaded', loadProducts);
+  </script>
+  
+  <!-- 结构化数据 - 产品 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Product",
+        "name": "天青釉茶杯",
+        "description": "这件天青釉茶杯是老爸亲手制作的，釉色像雨后的天空",
+        "image": "https://sxyrc.cn/images/product-001-800.webp",
+        "brand": {
+          "@type": "Person",
+          "name": "宋向元"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "CNY",
+          "price": "380",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
